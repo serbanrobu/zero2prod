@@ -17,7 +17,9 @@
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
             bacon
+            clang
             evcxr
+            llvmPackages.bintools
             rnix-lsp
             (rust-bin.stable.latest.default.override {
               extensions = [ "rust-analyzer" "rust-src" ];
